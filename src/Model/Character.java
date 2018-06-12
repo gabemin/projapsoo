@@ -93,26 +93,37 @@ public class Character {
 
     //"escuta" as teclas de direção para movimentar o personagem.
     void keyPressed(KeyEvent e) {
-       int key = e.getKeyCode();
-       if (key == KeyEvent.VK_LEFT)
-           west = 2;
-       if (key == KeyEvent.VK_UP)
-           north = 2;
-       if (key == KeyEvent.VK_RIGHT)
-           east = 2;
-       if (key == KeyEvent.VK_DOWN)
-           south = 2;
+       switch (e.getKeyCode()) {
+            case KeyEvent.VK_UP:
+                north = 2;
+                break;
+            case KeyEvent.VK_RIGHT:
+                east = 2;
+                break;
+            case KeyEvent.VK_DOWN:
+                south = 2;
+                break;
+            case KeyEvent.VK_LEFT:
+                west = 2;
+                break;
+        }
     }
     //detecta quando as teclas de direção são soltas e pára o movimento.
     void keyReleased(KeyEvent e) {
-        int key = e.getKeyCode();
-        if (key == KeyEvent.VK_LEFT)
-            west = 0;
-        if (key == KeyEvent.VK_UP)
-            north = 0;
-        if (key == KeyEvent.VK_RIGHT)
-            east = 0;
-        if (key == KeyEvent.VK_DOWN)
-            south = 0;
+        switch(e.getKeyCode()) {
+            case KeyEvent.VK_UP:
+                north = 0;
+                break;
+            case KeyEvent.VK_RIGHT:
+                east = 0;
+                break;
+            case KeyEvent.VK_DOWN:
+                south = 0;
+                break;
+            case KeyEvent.VK_LEFT:
+                west = 0;
+                break;
+        }
+
     }
 }

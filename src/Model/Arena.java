@@ -2,12 +2,9 @@ package Model;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
 
-public class Arena extends JPanel implements ActionListener {
+public class Arena extends JPanel implements ActionListener, KeyListener {
 
         private Timer timer;
         private Character character;
@@ -19,7 +16,7 @@ public class Arena extends JPanel implements ActionListener {
     }
     //inicializando o mapa do jogo
     private void initArena() {
-        addKeyListener(new TAdapter());
+        addKeyListener(this);
         setFocusable(true);
         setBackground(Color.black);
         setDoubleBuffered(true);
@@ -57,14 +54,19 @@ public class Arena extends JPanel implements ActionListener {
         repaint(character.getX()-1, character.getY()-1,
                 character.getSpriteWidth()+2, character.getSpriteHeight()+2);
     }
-    private class TAdapter extends KeyAdapter {
-        @Override
-        public void keyPressed(KeyEvent e) {
-            character.keyPressed(e);
-        }
-        @Override
-        public void keyReleased(KeyEvent e) {
-            character.keyReleased(e);
-        }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        character.keyPressed(e);
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        character.keyReleased(e);
     }
 }
