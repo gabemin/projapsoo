@@ -21,7 +21,7 @@ public class Arena extends JPanel implements ActionListener, KeyListener {
         setBackground(Color.black);
         setDoubleBuffered(true);
 
-        caminho = "#";
+        caminho = "C:\\Users\\gsmin\\IdeaProjects\\projapsoo\\src\\Spaceship.png";
         character = new Character(caminho);
 
         timer = new Timer(DELAY, this);
