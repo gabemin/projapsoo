@@ -4,14 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Arena extends JPanel implements ActionListener, KeyListener {
+/*public class ArenaComponent extends JPanel implements ActionListener, KeyListener {
 
         private Timer timer;
         private CharacterComponent character;
         private final int DELAY=10;
         private String caminho;
 
-    public Arena() {
+    public ArenaComponent() {
         initArena();
     }
 
@@ -50,30 +50,6 @@ public class Arena extends JPanel implements ActionListener, KeyListener {
     }*/
 
     //chamado a cada DELAY ms. chama o metodo step()
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        character.move();
-        repaint(character.getSpriteX()-1, character.getSpriteY()-1,
-                character.getSpriteWidth()+2, character.getSpriteHeight()+2);
-    }
 
-    //redesenha o personagem na nova localização
-    private void step() {
 
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        character.keyPressed(e);
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        character.keyReleased(e);
-    }
-}
+//}
