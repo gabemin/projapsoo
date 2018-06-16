@@ -1,16 +1,11 @@
-package Model;
-
-import sun.java2d.pipe.DrawImage;
+package View;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
-import java.awt.image.ImageObserver;
-import java.io.File;
 import java.io.IOException;
-import java.security.Key;
 
 //classe representa o personagem do jogador
 //aqui guardamos a imagem e as coordenadas do sprite.
@@ -84,40 +79,5 @@ public class CharacterComponent extends JComponent {
     }
 
 
-    //"escuta" as teclas de direção para movimentar o personagem.
-    void keyPressed(KeyEvent e) {
-        switch (e.getKeyCode()) {
-            case KeyEvent.VK_UP:
-                directionY = 2;
-                break;
-            case KeyEvent.VK_RIGHT:
-                directionX += 2;
-                break;
-            case KeyEvent.VK_DOWN:
-                directionY = -2;
-                break;
-            case KeyEvent.VK_LEFT:
-                directionX = -2;
-                break;
-        }
-    }
 
-    //detecta quando as teclas de direção são soltas e pára o movimento.
-    void keyReleased(KeyEvent e) {
-        switch (e.getKeyCode()) {
-            case KeyEvent.VK_UP:
-                directionY = 0;
-                break;
-            case KeyEvent.VK_RIGHT:
-                directionX = 0;
-                break;
-            case KeyEvent.VK_DOWN:
-                directionY = 0;
-                break;
-            case KeyEvent.VK_LEFT:
-                directionX = 0;
-                break;
-        }
-
-    }
 }

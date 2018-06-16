@@ -1,4 +1,4 @@
-import Model.Arena;
+import View.Arena;
 
 import javax.swing.*;
 import java.awt.*;
