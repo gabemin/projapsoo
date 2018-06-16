@@ -1,7 +1,7 @@
 import Model.Arena;
 
-import java.awt.EventQueue;
-import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
 
 public class MovingSpriteEx extends JFrame {
 
@@ -14,8 +14,9 @@ public class MovingSpriteEx extends JFrame {
 
         add(new Arena());
 
+
         setTitle("Moving sprite");
-        setSize(400, 300);
+        setSize(480, 320);
 
         setLocationRelativeTo(null);
         setResizable(false);
