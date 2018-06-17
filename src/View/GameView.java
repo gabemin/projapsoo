@@ -1,8 +1,6 @@
 package View;
 
-import Listeners.ViewChangeListener;
 import Model.ArenaModel;
-import Model.CharacterModel;
 
 import javax.swing.*;
 import java.awt.*;

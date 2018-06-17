@@ -47,6 +47,5 @@ public class EnemyModel {
 
     public void move() {
         x -= 2;
-        System.out.println("Enemy Moving x=%d"+x + "y=%d"+y);
     }
 }

@@ -1,6 +1,5 @@
 package View;
 
-import Listeners.ViewChangeListener;
 import Model.CharacterModel;
 
 import javax.imageio.ImageIO;
@@ -23,7 +22,7 @@ public class CharacterView {
 	}
 	
 	public void drawCharacter(Graphics g){
-		g.drawImage(image, character.getSpriteX(), character.getSpriteY(), null);
+		g.drawImage(image, character.getSpriteX(), character.getSpriteY(), character.getWidth(), character.getHeigth(), null);
 	}
 	
 	public BufferedImage getImage() {

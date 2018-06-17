@@ -21,7 +21,7 @@ public class EnemyView {
 	}
 	
 	public void drawEnemy(Graphics g){
-		g.drawImage(image, enemy.getX(), enemy.getY(), null);
+		g.drawImage(image, enemy.getX(), enemy.getY(), enemy.getWidht(), enemy.getHeigth(), null);
 	}
 	
 	public EnemyModel getEnemy() {

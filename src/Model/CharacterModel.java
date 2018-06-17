@@ -67,18 +67,15 @@ public class CharacterModel {
 
     public void moveRight() {
         spriteX += 2;
-        System.out.println("moving right");
+
     }
     public void moveLeft() {
         spriteX -= 2;
-        System.out.println("moving left");
     }
     public void moveUp() {
-        spriteY += 2;
-        System.out.println("moving up");
+        spriteY -= 2;
     }
     public void moveDown() {
-        spriteX -= 2;
-        System.out.println("moving down");
+        spriteY += 2;
     }
 }

@@ -1,15 +1,12 @@
 package Model;
 
-import View.CharacterComponent;
-
 import javax.swing.*;
-import java.awt.*;
 
 public class ArenaModel extends JPanel {
     private int height;
     private int width;
 
-    public ArenaModel(int height, int width) {
+    public ArenaModel(int width, int height) {
         this.height = height;
         this.width = width;
     }

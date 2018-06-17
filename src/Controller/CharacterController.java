@@ -1,10 +1,12 @@
 package Controller;
 
+import Utils.ViewChangeListener;
 import Model.CharacterModel;
+import View.CharacterView;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.Timer;
 
 public class CharacterController implements KeyListener {
     private CharacterModel charModel;
@@ -14,7 +16,7 @@ public class CharacterController implements KeyListener {
     
     public CharacterController(ViewChangeListener listener) {
         this.listener = listener;
-        charModel = new CharacterModel(0, 0, 0, 0, 30, 30);
+        charModel = new CharacterModel(0, 0, 0, 0, 50, 100);
         charView = new CharacterView(charModel);
     }
 
@@ -40,5 +42,15 @@ public class CharacterController implements KeyListener {
                 break;
         }
     }
+    public void updateView(Graphics graphics) {
+        charView.drawCharacter(graphics);
+    }
 
+    public CharacterModel getCharModel() {
+        return charModel;
+    }
+
+    public void setCharModel(CharacterModel charModel) {
+        this.charModel = charModel;
+    }
 }
