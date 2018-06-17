@@ -7,14 +7,16 @@ import java.awt.event.KeyListener;
 import java.util.Timer;
 
 public class CharacterController implements KeyListener {
-    private Timer timer;
-    private final int DELAY = 50;
-
-    public CharacterController() {
-
+    private CharacterModel charModel;
+    private CharacterView charView;
+    private ViewChangeListener listener;
+    
+    
+    public CharacterController(ViewChangeListener listener) {
+        this.listener = listener;
+        charModel = new CharacterModel(0, 0, 0, 0, 30, 30);
+        charView = new CharacterView(charModel);
     }
-
-    CharacterModel charModel = new CharacterModel(0,0,0,0, 30, 30);
 
     @Override
     public void keyTyped(KeyEvent e) {    }
@@ -37,10 +39,6 @@ public class CharacterController implements KeyListener {
                 charModel.moveLeft();
                 break;
         }
-    }
-
-    public void addKeyListner() {
-
     }
 
 }
